@@ -10,7 +10,8 @@ RUN apt-get install -y \
 	apache2 \
 	libapache2-mod-php5 \
 	php5-mcrypt \
-	php5-mysqlnd
+	php5-mysqlnd \
+	&& apt-get clean
 ### PDNS ###
 RUN cd /tmp && wget https://downloads.powerdns.com/releases/deb/pdns-static_3.4.5-1_amd64.deb && dpkg -i pdns-static_3.4.5-1_amd64.deb
 RUN useradd --system pdns
