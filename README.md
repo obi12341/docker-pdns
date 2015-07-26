@@ -4,8 +4,7 @@ PowerDNS Master and Poweradmin installed
 
 # Quickstart
 
-```wget https://raw.githubusercontent.com/obi12341/docker-pdns-master/master/docker-compose.yml
-docker-compose up -d```
+```wget https://raw.githubusercontent.com/obi12341/docker-pdns-master/master/docker-compose.yml && docker-compose up -d```
 
 # Running
 
