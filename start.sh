@@ -6,6 +6,9 @@ MYSQL_DB=pdns
 PDNS_ALLOW_AXFR_IPS=${PDNS_ALLOW_AXFR_IPS:-127.0.0.1}
 PDNS_MASTER=${PDNS_MASTER:-yes}
 PDNS_SLAVE=${PDNS_SLAVE:-no}
+POWERADMIN_HOSTMASTER=${POWERADMIN_HOSTMASTER:-}
+POWERADMIN_NS1=${POWERADMIN_NS1:-}
+POWERADMIN_NS2=${POWERADMIN_NS2:-}
 
 until nc -z db 3306; do
     echo "$(date) - waiting for mysql..."
@@ -36,5 +39,8 @@ sed -i "s/{{MYSQL_HOST}}/${MYSQL_HOST}/" /var/www/html/inc/config.inc.php
 sed -i "s/{{MYSQL_USER}}/${MYSQL_USER}/" /var/www/html/inc/config.inc.php
 sed -i "s/{{MYSQL_PASSWORD}}/${MYSQL_PASSWORD}/" /var/www/html/inc/config.inc.php
 sed -i "s/{{MYSQL_DB}}/${MYSQL_DB}/" /var/www/html/inc/config.inc.php
+sed -i "s/{{POWERADMIN_HOSTMASTER}}/${POWERADMIN_HOSTMASTER}/" /var/www/html/inc/config.inc.php
+sed -i "s/{{POWERADMIN_NS1}}/${POWERADMIN_NS1}/" /var/www/html/inc/config.inc.php
+sed -i "s/{{POWERADMIN_NS2}}/${POWERADMIN_NS2}/" /var/www/html/inc/config.inc.php
 
 /usr/bin/supervisord

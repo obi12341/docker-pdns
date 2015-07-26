@@ -40,9 +40,9 @@ $iface_title = 'Poweradmin';
 $iface_add_reverse_record = true;
 
 // Predefined DNS settings
-$dns_hostmaster = '';
-$dns_ns1 = '';
-$dns_ns2 = '';
+$dns_hostmaster = '{{POWERADMIN_HOSTMASTER}}';
+$dns_ns1 = '{{POWERADMIN_NS1}}';
+$dns_ns2 = '{{POWERADMIN_NS2}}';
 $dns_ttl = 86400;
 $dns_fancy = false;
 $dns_strict_tld_check = false;
