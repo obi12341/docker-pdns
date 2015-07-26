@@ -17,7 +17,7 @@ These options can be set:
 
 - **PDNS_ALLOW_AXFR_IPS**: restrict zonetransfers to originate from these IP addresses. (Default: "127.0.0.1", Possible Values: "IPs comma seperated")
 - **PDNS_MASTER**: act as master (Default: "yes", Possible Values: "yes, no")
-- **PDNS_MASTER**: act as slave (Default: "no", Possible Values: "yes, no")
+- **PDNS_SLAVE**: act as slave (Default: "no", Possible Values: "yes, no")
 - **POWERDNS_HOSTMASTER**: default hostmaster (Default: "", Possible Values: "<email>")
 - **POWERDNS_NS1**: default nameserver1 (Default: "", Possible Values: "<domain>")
 - **POWERDNS_NS2**: default nameserver1 (Default: "", Possible Values: "<domain>")
