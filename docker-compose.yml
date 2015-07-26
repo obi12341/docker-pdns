@@ -6,6 +6,8 @@ pdns:
   - "53:53"
   - "53:53/udp"
   - "8080:80"
+  environment:
+  - PDNS_ALLOW_AXFR_IPS=127.0.0.1
 mysql:
   image: mysql
   environment:

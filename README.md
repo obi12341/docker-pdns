@@ -15,4 +15,4 @@ Just use this command to start the container. PowerDNS will listen on port 53/tc
 # Configuration
 These options can be set:
 
-- **PDNS_ALLOW_AXFR_IPS**: Enable or disable ipv6. (Default: "127.0.0.1", Possible Values: "IPs comma seperated")
+- **PDNS_ALLOW_AXFR_IPS**: restrict zonetransfers to originate from these IP addresses. (Default: "127.0.0.1", Possible Values: "IPs comma seperated")
