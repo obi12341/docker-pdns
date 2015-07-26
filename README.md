@@ -1,6 +1,6 @@
 PowerDNS Master and Poweradmin installed
 ===========
-[![](https://badge.imagelayers.io/writl/unbound:latest.svg)](https://imagelayers.io/?images=writl/pdns-master:latest 'Get your own badge on imagelayers.io')
+[![](https://badge.imagelayers.io/writl/unbound:latest.svg)](https://imagelayers.io/?images=writl/pdns:latest 'Get your own badge on imagelayers.io')
 
 # Quickstart
 
@@ -10,7 +10,7 @@ PowerDNS Master and Poweradmin installed
 
 Just use this command to start the container. PowerDNS will listen on port 53/tcp, 53/udp and 8080/tcp.
 
-```docker run --name pdns-master --link mysql:db -d -p 53:53/udp -p 53:53 -p 8080:80 writl/pdns-master```
+```docker run --name pdns-master --link mysql:db -d -p 53:53/udp -p 53:53 -p 8080:80 writl/pdns```
 
 # Configuration
 These options can be set:

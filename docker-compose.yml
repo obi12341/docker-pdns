@@ -1,5 +1,5 @@
 pdns:
-  build: .
+  image: writl/pdns
   links:
   - "mysql:db"
   ports:
