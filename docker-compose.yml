@@ -1,0 +1,12 @@
+pdns:
+  build: .
+  links:
+  - "mysql:db"
+  ports:
+  - "53:53"
+  - "53:53/udp"
+  - "8080:80"
+mysql:
+  image: mysql
+  environment:
+  - MYSQL_ROOT_PASSWORD=ugs0irm9ek3wov6mud4e
