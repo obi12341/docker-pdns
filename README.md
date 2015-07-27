@@ -1,6 +1,6 @@
 PowerDNS Authoritative server and Poweradmin
 ===========
-[![](https://badge.imagelayers.io/writl/unbound:latest.svg)](https://imagelayers.io/?images=writl/pdns:3.4.5 'Get your own badge on imagelayers.io')
+[![](https://badge.imagelayers.io/writl/pdns:latest.svg)](https://imagelayers.io/?images=writl/pdns:latest 'Get your own badge on imagelayers.io')
 
 # Quickstart
 
