@@ -12,7 +12,5 @@ mysql:
   image: mysql
   environment:
   - MYSQL_ROOT_PASSWORD=ugs0irm9ek3wov6mud4e
-  ports:
-  - "3306:3306"
   volumes:
   - /srv/docker/pdns-master/mysql/:/var/lib/mysql
