@@ -19,5 +19,5 @@ These options can be set:
 - **PDNS_MASTER**: act as master (Default: "yes", Possible Values: "yes, no")
 - **PDNS_SLAVE**: act as slave (Default: "no", Possible Values: "yes, no")
 - **POWERADMIN_HOSTMASTER**: default hostmaster (Default: "", Possible Values: "<email>")
-- **POWERADMIN_NS1**: default nameserver1 (Default: "", Possible Values: "<domain>")
-- **POWERADMIN_NS2**: default nameserver1 (Default: "", Possible Values: "<domain>")
+- **POWERADMIN_NS1**: default Nameserver 1 (Default: "", Possible Values: "<domain>")
+- **POWERADMIN_NS2**: default Nameserver 2 (Default: "", Possible Values: "<domain>")
