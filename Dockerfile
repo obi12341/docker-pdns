@@ -13,7 +13,7 @@ RUN apt-get install -y \
 	php5-mysqlnd \
 	&& apt-get clean
 ### PDNS ###
-RUN cd /tmp && wget https://downloads.powerdns.com/releases/deb/pdns-static_3.4.5-1_amd64.deb && dpkg -i pdns-static_3.4.5-1_amd64.deb
+RUN cd /tmp && wget https://downloads.powerdns.com/releases/deb/pdns-static_3.4.6-1_amd64.deb && dpkg -i pdns-static_3.4.6-1_amd64.deb
 RUN useradd --system pdns
 
 ADD assets/pdns/pdns.conf /etc/powerdns/pdns.conf
