@@ -39,13 +39,13 @@ RUN mkdir -p /var/www/html/ \
 	&& git checkout c49908ecaa2a43015e53b3749ff9191e44a83a85 \
 	&& rm -R /var/www/html/install
 
-ADD assets/poweradmin/config.inc.php /var/www/html/inc/config.inc.php
-ADD assets/mysql/poweradmin.sql /poweradmin.sql
+COPY assets/poweradmin/config.inc.php /var/www/html/inc/config.inc.php
+COPY assets/mysql/poweradmin.sql /poweradmin.sql
 RUN chown -R www-data:www-data /var/www/html/
 
 ### SUPERVISOR ###
-ADD assets/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-ADD start.sh /start.sh
+COPY assets/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY start.sh /start.sh
 
 EXPOSE 53 80
 EXPOSE 53/udp
