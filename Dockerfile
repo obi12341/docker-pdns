@@ -3,8 +3,7 @@ MAINTAINER Patrick Oberdorf <patrick@oberdorf.net>
 
 ENV VERSION 3.4.7-1
 
-RUN apt-get update
-RUN apt-get install -y \
+RUN apt-get update && apt-get install -y \
 	wget \
 	git \
 	supervisor \
@@ -13,9 +12,11 @@ RUN apt-get install -y \
 	php5-fpm \
 	php5-mcrypt \
 	php5-mysqlnd \
-	&& apt-get clean
+	&& apt-get clean \
+	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
 ### PDNS ###
-RUN cd /tmp && wget https://downloads.powerdns.com/releases/deb/pdns-static_${VERSION}_amd64.deb && dpkg -i pdns-static_${VERSION}_amd64.deb
+RUN cd /tmp && wget https://downloads.powerdns.com/releases/deb/pdns-static_${VERSION}_amd64.deb && dpkg -i pdns-static_${VERSION}_amd64.deb && rm pdns-static_${VERSION}_amd64.deb
 RUN useradd --system pdns
 
 COPY assets/nginx/nginx.conf /etc/nginx/nginx.conf
