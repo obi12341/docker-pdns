@@ -1,7 +1,7 @@
 FROM ubuntu:trusty
 MAINTAINER Patrick Oberdorf <patrick@oberdorf.net>
 
-ENV VERSION 3.4.7-1
+ENV VERSION 3.4.8-1
 
 RUN apt-get update
 RUN apt-get install -y \
