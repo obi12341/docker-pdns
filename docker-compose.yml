@@ -14,6 +14,6 @@ pdns:
 mysql:
   image: mysql
   environment:
-  - MYSQL_ROOT_PASSWORD=ugs0irm9ek3wov6mud4e
+  - MYSQL_ROOT_PASSWORD=
   volumes:
-  - /srv/docker/pdns-master/mysql/:/var/lib/mysql
+  - ./mysql/:/var/lib/mysql
