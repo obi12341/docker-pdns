@@ -8,6 +8,9 @@ pdns:
   - "8080:80"
   environment:
   - PDNS_ALLOW_AXFR_IPS=127.0.0.1
+  - PDNS_DISTRIBUTOR_THREADS=3
+  - PDNS_CACHE_TTL=20
+  - PDNS_RECURSIVE_CACHE_TTL=10
 mysql:
   image: mysql
   environment:
