@@ -36,7 +36,7 @@ RUN php5enmod mcrypt
 RUN mkdir -p /var/www/html/ \
 	&& cd /var/www/html \
 	&& git clone https://github.com/poweradmin/poweradmin.git . \
-	&& git checkout 95017a780d71805ee647eb732c4c2e9fbbe9e6c1 \
+	&& git checkout c8bca21cb91ddc956ba4a752f570587a209c2e78 \
 	&& rm -R /var/www/html/install
 
 COPY assets/poweradmin/config.inc.php /var/www/html/inc/config.inc.php

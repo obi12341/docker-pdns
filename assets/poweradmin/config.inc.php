@@ -16,7 +16,7 @@
 // <https://github.com/poweradmin/poweradmin/wiki/Configuration-File>
 // Database settings
 $db_host = '{{MYSQL_HOST}}';
-$db_port = '3306';
+$db_port = '{{MYSQL_PORT}}';
 $db_user = '{{MYSQL_USER}}';
 $db_pass = '{{MYSQL_PASSWORD}}';
 $db_name = '{{MYSQL_DB}}';
