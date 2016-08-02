@@ -64,7 +64,7 @@ $syslog_facility = LOG_USER;
 
 // PowerDNSSEC settings
 $pdnssec_use = true;
-$pdnssec_command = '/usr/bin/pdnssec';
+$pdnssec_command = '/usr/bin/pdnsutil';
 
 // LDAP settings
 $ldap_use = false;
