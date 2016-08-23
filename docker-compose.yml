@@ -3,6 +3,7 @@ pdns:
   #image: secns/pdns
   links:
   - "mysql:db"
+  - "graphite:graphite"
   ports:
   - "53:53"
   - "53:53/udp"
@@ -18,7 +19,16 @@ pdns:
   - PDNS_API=yes
   - PDNS_API_KEY=your_own_api_key_here
   - PDNS_API_READONLY=yes
+  - PDNS_CARBON_SERVER=graphite:2004
 mysql:
   image: mysql
   environment:
   - MYSQL_ROOT_PASSWORD=aPYsB84zdNZNmn64sjy
+graphite:
+  image: hopsoft/graphite-statsd
+  ports:
+  - "80:8002"
+  - "2003-2004:2003-2004"
+  - "2023-2024:2023-2024"
+  - "8125:8125/udp"
+  - "8126:8126"

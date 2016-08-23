@@ -15,6 +15,7 @@ PDNS_WEBSERVER_PASSWORD=${PDNS_WEBSERVER_PASSWORD:changeme}
 PDNS_API=${PDNS_API:no}
 PDNS_API_KEY=${PDNS_API_KEY:your_own_api_key_here}
 PDNS_API_READONLY=${PDNS_API_READONLY:yes}
+PDNS_CARBON_SERVER=${PDNS_CARBON_SERVER:-}
 POWERADMIN_HOSTMASTER=${POWERADMIN_HOSTMASTER:-}
 POWERADMIN_NS1=${POWERADMIN_NS1:-}
 POWERADMIN_NS2=${POWERADMIN_NS2:-}
@@ -51,6 +52,7 @@ sed -i "s/{{PDNS_WEBSERVER_PASSWORD}}/${PDNS_WEBSERVER_PASSWORD}/" /etc/powerdns
 sed -i "s/{{PDNS_API}}/${PDNS_API}/" /etc/powerdns/pdns.conf
 sed -i "s/{{PDNS_API_KEY}}/${PDNS_API_KEY}/" /etc/powerdns/pdns.conf
 sed -i "s/{{PDNS_API_READONLY}}/${PDNS_API_READONLY}/" /etc/powerdns/pdns.conf
+sed -i "s/{{PDNS_CARBON_SERVER}}/${PDNS_CARBON_SERVER}/" /etc/powerdns/pdns.conf
 
 ### POWERADMIN
 sed -i "s/{{MYSQL_HOST}}/${MYSQL_HOST}/" /var/www/html/inc/config.inc.php
