@@ -10,6 +10,11 @@ PDNS_SLAVE=${PDNS_SLAVE:-no}
 PDNS_CACHE_TTL=${PDNS_CACHE_TTL:-20}
 PDNS_DISTRIBUTOR_THREADS=${PDNS_DISTRIBUTOR_THREADS:-3}
 PDNS_RECURSIVE_CACHE_TTL=${PDNS_RECURSIVE_CACHE_TTL:-10}
+PDNS_WEBSERVER=${PDNS_WEBSERVER:no}
+PDNS_WEBSERVER_PASSWORD=${PDNS_WEBSERVER_PASSWORD:changeme}
+PDNS_API=${PDNS_API:no}
+PDNS_API_KEY=${PDNS_API_KEY:your_own_api_key_here}
+PDNS_API_READONLY=${PDNS_API_READONLY:yes}
 POWERADMIN_HOSTMASTER=${POWERADMIN_HOSTMASTER:-}
 POWERADMIN_NS1=${POWERADMIN_NS1:-}
 POWERADMIN_NS2=${POWERADMIN_NS2:-}
@@ -41,6 +46,11 @@ sed -i "s/{{PDNS_SLAVE}}/${PDNS_SLAVE}/" /etc/powerdns/pdns.conf
 sed -i "s/{{PDNS_CACHE_TTL}}/${PDNS_CACHE_TTL}/" /etc/powerdns/pdns.conf
 sed -i "s/{{PDNS_DISTRIBUTOR_THREADS}}/${PDNS_DISTRIBUTOR_THREADS}/" /etc/powerdns/pdns.conf
 sed -i "s/{{PDNS_RECURSIVE_CACHE_TTL}}/${PDNS_RECURSIVE_CACHE_TTL}/" /etc/powerdns/pdns.conf
+sed -i "s/{{PDNS_WEBSERVER}}/${PDNS_WEBSERVER}/" /etc/powerdns/pdns.conf
+sed -i "s/{{PDNS_WEBSERVER_PASSWORD}}/${PDNS_WEBSERVER_PASSWORD}/" /etc/powerdns/pdns.conf
+sed -i "s/{{PDNS_API}}/${PDNS_API}/" /etc/powerdns/pdns.conf
+sed -i "s/{{PDNS_API_KEY}}/${PDNS_API_KEY}/" /etc/powerdns/pdns.conf
+sed -i "s/{{PDNS_API_READONLY}}/${PDNS_API_READONLY}/" /etc/powerdns/pdns.conf
 
 ### POWERADMIN
 sed -i "s/{{MYSQL_HOST}}/${MYSQL_HOST}/" /var/www/html/inc/config.inc.php

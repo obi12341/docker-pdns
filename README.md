@@ -24,6 +24,13 @@ These options can be set:
 - **PDNS_CACHE_TTL**: Seconds to store packets in the PacketCache (Default: "20", Possible Values: "<integer>")
 - **PDNS_DISTRIBUTOR_THREADS**: Default number of Distributor (backend) threads to start (Default: "3", Possible Values: "<integer>")
 - **PDNS_RECURSIVE_CACHE_TTL**: Seconds to store packets in the PacketCache (Default: "10", Possible Values: "<integer>")
+
+- **PDNS_WEBSERVER**: Set it to "yes" to enable PowerDNS own webserver (Default: "no")
+- **PDNS_WEBSERVER_PASSWORD**: If you set webserver=yes do not forget to set password
+- **PDNS_API**: Set it to "yes" to enable PowerDNS own api. For this to work you have to enable WEBSERVER (Default: "no", Possible Values: "<integer>")
+- **PDNS_API_KEY**: Key will be required by api as Header "X-API-Key"
+- **PDNS_API_READONLY**: Set it to "yes" to enable api for updates (Default: "no")
+
 - **POWERADMIN_HOSTMASTER**: default hostmaster (Default: "", Possible Values: "<email>")
 - **POWERADMIN_NS1**: default Nameserver 1 (Default: "", Possible Values: "<domain>")
 - **POWERADMIN_NS2**: default Nameserver 2 (Default: "", Possible Values: "<domain>")
