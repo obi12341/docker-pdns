@@ -30,6 +30,7 @@ These options can be set:
 - **PDNS_API**: Set it to "yes" to enable PowerDNS own api. For this to work you have to enable WEBSERVER (Default: "no", Possible Values: "<integer>")
 - **PDNS_API_KEY**: Key will be required by api as Header "X-API-Key"
 - **PDNS_API_READONLY**: Set it to "yes" to enable api for updates (Default: "no")
+- **PDNS_CARBON_SERVER**: Carbon server to collect stats (see docker-compose.yml file for example)
 
 - **POWERADMIN_HOSTMASTER**: default hostmaster (Default: "", Possible Values: "<email>")
 - **POWERADMIN_NS1**: default Nameserver 1 (Default: "", Possible Values: "<domain>")
