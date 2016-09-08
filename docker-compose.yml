@@ -1,18 +1,19 @@
-pdns:
-  build: . 
-  #image: secns/pdns
-  links:
-  - "mysql:db"
-  ports:
-  - "53:53"
-  - "53:53/udp"
-  - "8080:80"
-  environment:
-  - PDNS_ALLOW_AXFR_IPS=127.0.0.1
-  - PDNS_DISTRIBUTOR_THREADS=3
-  - PDNS_CACHE_TTL=20
-  - PDNS_RECURSIVE_CACHE_TTL=10
-mysql:
-  image: mysql
-  environment:
-  - MYSQL_ROOT_PASSWORD=aPYsB84zdNZNmn64sjy
+version: "2"
+services:
+  pdns:
+    build: . 
+    #image: secns/pdns
+    ports:
+    - "53:53"
+    - "53:53/udp"
+    - "8080:80"
+    environment:
+    - PDNS_ALLOW_AXFR_IPS=127.0.0.1
+    - PDNS_DISTRIBUTOR_THREADS=3
+    - PDNS_CACHE_TTL=20
+    - PDNS_RECURSIVE_CACHE_TTL=10
+    - DB_ENV_MYSQL_ROOT_PASSWORD=aPYsB84zdNZNmn64sjy
+  db:
+    image: mysql
+    environment:
+    - MYSQL_ROOT_PASSWORD=aPYsB84zdNZNmn64sjy
