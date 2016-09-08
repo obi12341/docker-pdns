@@ -24,6 +24,8 @@ These options can be set:
 - **PDNS_CACHE_TTL**: Seconds to store packets in the PacketCache (Default: "20", Possible Values: "<integer>")
 - **PDNS_DISTRIBUTOR_THREADS**: Default number of Distributor (backend) threads to start (Default: "3", Possible Values: "<integer>")
 - **PDNS_RECURSIVE_CACHE_TTL**: Seconds to store packets in the PacketCache (Default: "10", Possible Values: "<integer>")
+- **PDNS_RECURSOR**: If recursion is desired, IP address of a recursing nameserver (Default: "no", Possible Values: "yes, no")
+- **PDNS_ALLOW_RECURSION**: List of subnets that are allowed to recurse (Default: "127.0.0.1", Possible Values: "<ipaddr>")
 - **POWERADMIN_HOSTMASTER**: default hostmaster (Default: "", Possible Values: "<email>")
 - **POWERADMIN_NS1**: default Nameserver 1 (Default: "", Possible Values: "<domain>")
 - **POWERADMIN_NS2**: default Nameserver 2 (Default: "", Possible Values: "<domain>")
