@@ -42,8 +42,8 @@ RUN rm /etc/nginx/sites-enabled/default
 RUN php5enmod mcrypt
 RUN mkdir -p /var/www/html/ \
 	&& cd /var/www/html \
-	&& git clone https://github.com/wociscz/poweradmin.git . \
-	&& git checkout 98ecbb5692d4f9bc42110ec478be63eb5651c6de \
+	&& git clone https://github.com/poweradmin/poweradmin.git . \
+	&& git checkout 772946ad40c765fece19aafbefd04fa23745e8ec \
 	&& rm -R /var/www/html/install
 
 COPY assets/poweradmin/config.inc.php /var/www/html/inc/config.inc.php
