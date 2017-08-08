@@ -12,8 +12,8 @@ services:
     - PDNS_DISTRIBUTOR_THREADS=3
     - PDNS_CACHE_TTL=20
     - PDNS_RECURSIVE_CACHE_TTL=10
-    - DB_ENV_MYSQL_ROOT_PASSWORD=aPYsB84zdNZNmn64sjy
+    - DB_ENV_MYSQL_ROOT_PASSWORD=changeme
   db:
     image: mysql
     environment:
-    - MYSQL_ROOT_PASSWORD=aPYsB84zdNZNmn64sjy
+    - MYSQL_ROOT_PASSWORD=changeme
