@@ -45,7 +45,7 @@ RUN mkdir -p /var/www/html/ \
 	&& cd /var/www/html \
 	&& rm -rf /var/www/html/* \
 	&& git clone https://github.com/poweradmin/poweradmin.git . \
-	&& git checkout 772946ad40c765fece19aafbefd04fa23745e8ec \
+	&& git checkout b27f28b2d586afb201904437605be988ee048c22 \
 	&& rm -R /var/www/html/install
 
 COPY assets/poweradmin/config.inc.php /var/www/html/inc/config.inc.php
