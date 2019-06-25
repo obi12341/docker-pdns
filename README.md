@@ -1,7 +1,5 @@
 PowerDNS Authoritative server and Poweradmin
 ===========
-[![](https://badge.imagelayers.io/secns/pdns:latest.svg)](https://imagelayers.io/?images=secns/pdns:latest 'Get your own badge on imagelayers.io')
-
 # Quickstart
 
 ```wget https://raw.githubusercontent.com/obi12341/docker-pdns/master/docker-compose.yml && docker-compose up -d```
