@@ -1,7 +1,7 @@
 FROM ubuntu:xenial
 MAINTAINER Patrick Oberdorf <patrick@oberdorf.net>
 
-ENV VERSION 41
+ENV VERSION 42
 
 COPY assets/apt/preferences.d/pdns /etc/apt/preferences.d/pdns
 RUN apt-get update && apt-get install -y curl sudo \
