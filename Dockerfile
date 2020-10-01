@@ -20,6 +20,7 @@ RUN apt-get update && apt-get install -y \
 	php7.0-mysqlnd \
 	pdns-server \
 	pdns-backend-mysql \
+	pdns-backend-bind \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
