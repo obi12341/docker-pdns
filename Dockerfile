@@ -20,7 +20,6 @@ RUN apt-get update && apt-get install -y \
 	php7.0-mysqlnd \
 	pdns-server \
 	pdns-backend-mysql \
-	pdns-backend-bind \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -56,6 +55,8 @@ RUN chown -R www-data:www-data /var/www/html/ \
 ### SUPERVISOR ###
 COPY assets/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY start.sh /start.sh
+
+RUN rm /etc/powerdns/pdns.d/bind.conf
 
 EXPOSE 53 80
 EXPOSE 53/udp
