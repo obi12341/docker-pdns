@@ -56,6 +56,8 @@ RUN chown -R www-data:www-data /var/www/html/ \
 COPY assets/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY start.sh /start.sh
 
+RUN rm /etc/powerdns/pdns.d/bind.conf
+
 EXPOSE 53 80
 EXPOSE 53/udp
 
